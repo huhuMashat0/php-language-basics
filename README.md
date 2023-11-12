@@ -19,4 +19,9 @@
 * الجملة الشرطية switch
 *  العامل الثلاثي Ternary Operator
 * التحقق من القيم باستخدام isset
-* عامل التحقق Null Coalescing Operator 
+* عامل التحققNull Coalescing Operator 
+
+### القسم الرابع: حلقات التكرار Loops
+* الحلقات while و do...while 
+* الحلقة for
+* التوقف والمتابعة break و continue  
