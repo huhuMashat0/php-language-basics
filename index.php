@@ -22,21 +22,12 @@
     ],
    ];
 
-   $count = count($employees);
-   // Ascending
-   echo "Asc<br>";
-   $i = 0;
-   while ($i < $count) {
-    echo'Employee ' . ($i+1) . " => ". $employees[$i]['name'] .' - ' . $employees[$i]['job'] . "<br>" ;
-    $i++;
+   //foreach 
+   foreach ($employees as $key => $employee) {
+    echo ($key + 1 ) . ' => '. $employee['name'] .' - '. $employee['job']. " - (";
+    foreach ($employee["skills"] as $key2 => $skill) {
+        echo $skill .  ",";
    }
-   
-    
-    // Descending
-    echo "<br>Desc<br>";
-   $i = $count - 1;
-   while ($i >= 0) {
-    echo'Employee ' . ($i+1) . " => ". $employees[$i]['name'] .' - ' . $employees[$i]['job'] . "<br>" ;
-    $i--;
-   }
+   echo ")<br>";
+}
 ?>
