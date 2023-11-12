@@ -1,13 +1,18 @@
 <?php
-   $a =1;
-   $b = 2;
+    // $a = null;
+    $a = 1;
+    const MAX = 100;
 
-    $result = $a > $b ? "a is bigger than b" : "a is not bigger than b";
-    echo $result;
+    if(isset($a)){
+        echo "defined";
+    }else{
+        echo "undefined";
+    }
 
-//    if($a < $b){
-//     echo "a is bigger than b";
-//    }else{
-//     echo "a is not bigger than b";
-//    }
+    echo "<br>";
+    echo isset($a) ? "defined" : "undefined";
+
+    echo "<br>";
+    // echo defined("M1AX") ? "defined" : "undefined";
+    echo defined("MAX") ? "defined" : "undefined";
 ?>
