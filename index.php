@@ -22,20 +22,21 @@
     ],
    ];
 
-//    echo $employees[0]['name']."<br>";
-//    echo $employees[0]['age']."<br>";
-//    echo $employees[0]['job']."<br>";
-//    echo $employees[0]['skills'][0]."<br>";
-
-   for ($i = 0; $i < count($employees); $i++) {
-    echo "<br>*******************<br>Employee " . ($i + 1) . "<br>*******************<br>";
-    echo "Name: " . $employees[$i]["name"]."<br>";
-    echo "Age: " .$employees[$i]["age"]."<br>";
-    echo "Job: " .$employees[$i]["job"]."<br>";
-    echo "Skills: (";
-    for($j=0; $j <= 3; $j++){
-        echo $employees[$i]["skills"][$j]. ", ";
-    };
-    echo ")"."<br>";
+   $count = count($employees);
+   // Ascending
+   echo "Asc<br>";
+   $i = 0;
+   while ($i < $count) {
+    echo'Employee ' . ($i+1) . " => ". $employees[$i]['name'] .' - ' . $employees[$i]['job'] . "<br>" ;
+    $i++;
+   }
+   
+    
+    // Descending
+    echo "<br>Desc<br>";
+   $i = $count - 1;
+   while ($i >= 0) {
+    echo'Employee ' . ($i+1) . " => ". $employees[$i]['name'] .' - ' . $employees[$i]['job'] . "<br>" ;
+    $i--;
    }
 ?>
