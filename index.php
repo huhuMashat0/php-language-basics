@@ -1,13 +1,17 @@
 <?php
-   $num1 = 1;
-   $num2 = 0;
+   $i = 3;
 
-
-   if ($num1 > $num2) {
-    echo "a is bigger than b";
-   } else if ($num1 == $num2) {
-    echo "a is equal to b";
-   }else{
-    echo "a is not bigger than b";
+   switch ($i) {
+    case 0:
+        echo "i is equal to 0";
+        break;
+    case 1:
+        echo "i is equal to 1";
+        break;
+    case 2:
+        echo "i is equal to 2";
+        break;
+    default:
+        echo "i is not equal to 0, 1 or 2";
    }
 ?>
