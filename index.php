@@ -1,22 +1,15 @@
 <?php
-    // Null coalescing operator (PHP v.7)
+    // while loop
+    $i = 1;
+    echo "while loop: <br>";
+    while ($i <= 10) {
+        echo $i++ . '<br>';
+    }
 
-    $userName = 'mohammad';
-    $email = 'mohammad@example.com';
-
-    // echo $isset($userName) ? $userName :'no body';
-    echo $userName ?? $email ?? 'no body';
-
-    //old code before php v7
-    // $name = null;
-    // $age = 22;
-    // if ($name == null) {
-    //     if ($age == null) {
-    //         echo 'something else';
-    //     } else {
-    //         echo $age;
-    //     }
-    // } else {
-    //     echo $name;
-    // }
+    // do while
+    echo '<br>do...while: <br>';
+    $y=1;
+    do{
+        echo $y++ . '<br>';
+    }while($y <= 10);
 ?>
