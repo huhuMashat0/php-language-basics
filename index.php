@@ -1,6 +1,14 @@
 <?php
+    // String
+    $name = 'Hsoub';
 
-    $name = 'Hussein';
-    // echo "Hello " . $name;
-    echo "Hello, {$name} ";
+    //Nubers 
+    $age = 28; // integer
+    $pi = 3.14; // double
+
+    //booleans (true or false)
+    $rainy = false;
+
+    //null
+    $empty = null;
 ?>
