@@ -1,10 +1,14 @@
 <?php
-    // variable
-    $name = "Hsob";
-    echo $name;
-    echo "<br>";
+   $num1 = 6;
+   $num2 = 3;
 
-    // constants
-    const max_value = 100;
-    echo max_value;
+   echo "{$num1} + {$num2} = " . $num1 + $num2 . "<br>";
+   echo "{$num1} - {$num2} = " . $num1 - $num2 . "<br>";
+   echo "{$num1} / {$num2} = " . $num1 / $num2 . "<br>";
+   echo "{$num1} * {$num2} = " . $num1 * $num2 . "<br>";
+   echo "{$num1} ** {$num2} = " . $num1 ** $num2 . "<br>";
+   echo "{$num1} % {$num2} = " . $num1  % $num2 . "<br>";
+
+   echo "{$num1}++ = " . $num1++ . "<br>";
+   echo "--{$num2} = " . --$num2 . "<br>";
 ?>
