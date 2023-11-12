@@ -1,18 +1,21 @@
 <?php
-    // $a = null;
-    $a = 1;
-    const MAX = 100;
+    // Null coalescing operator (PHP v.7)
+    $userName = 'mohammad';
+    $email = 'mohammad@example.com';
 
-    if(isset($a)){
-        echo "defined";
-    }else{
-        echo "undefined";
-    }
+    // echo isset($userName) ? $userName :'';
+    echo $userName ?? $email ?? 'noBody';
 
-    echo "<br>";
-    echo isset($a) ? "defined" : "undefined";
-
-    echo "<br>";
-    // echo defined("M1AX") ? "defined" : "undefined";
-    echo defined("MAX") ? "defined" : "undefined";
+    //old code before use ??
+    // $name = null;
+    // $age = 22;
+    // if ($name == null) {
+    //     if ($age == null) {
+    //         echo 'something else';
+    //     } else {
+    //         echo $age;
+    //     }
+    // } else {
+    //     echo $name;
+    // }
 ?>
