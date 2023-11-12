@@ -1,14 +1,19 @@
 <?php
-    // String
-    $name = 'Hsoub';
+    // echo gettype("Hello");
+    // echo gettype(28);
 
-    //Nubers 
-    $age = 28; // integer
-    $pi = 3.14; // double
+    // *** casting ***
 
-    //booleans (true or false)
-    $rainy = false;
+    // to string
+    $var =  10;
+    echo gettype((string) $var);
+    echo "<br>";
 
-    //null
-    $empty = null;
+    // to integer
+    echo (integer) '5Hello';
+    echo "<br>";
+
+    // to boolean
+    echo (boolean) "Hi"; 
+    echo "<br>";
 ?>
