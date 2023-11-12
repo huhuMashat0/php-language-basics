@@ -1,33 +1,24 @@
 <?php
-   // Associative Arrays
+    // count
+    echo "count() => " . count(["Hello", "World"]) . "<br>";
 
-   $employees = [
-    [
-        'name' =>'Mohammad',
-        'age' => 25,
-        'job' => 'Web Developer',
-        'skills' => ['PHP', 'MySQL', 'JavaScript', 'HTML']
-    ],
-    [
-        'name' =>'Ibrahim',
-        'age' => 27,
-        'job' => 'Web Developer',
-        'skills' => ['NodeJS', 'MongoDB', 'ReactJS', 'Git']
-    ],
-    [
-        'name' =>'Amani',
-        'age' => 20,
-        'job' => 'Back end',
-        'skills' => ['NodeJS', 'PHP', 'Ruby', 'Github']
-    ],
-   ];
+    // is _array
+    echo "is_array() => " . (integer) is_array([1,2,3]). " >> it's array<br>";
+    echo "is_array() => " . (integer) is_array('Hello'). " >>it is not array<br>";
 
-   //foreach 
-   foreach ($employees as $key => $employee) {
-    echo ($key + 1 ) . ' => '. $employee['name'] .' - '. $employee['job']. " - (";
-    foreach ($employee["skills"] as $key2 => $skill) {
-        echo $skill .  ",";
-   }
-   echo ")<br>";
-}
+    // explode
+    $string = "php javascript ruby swift kotlin";
+    $arr = explode(" ", $string);
+    echo "explode() => ";
+    print_r($arr);
+
+    //implode
+    echo "<br>implode() => ". implode(" - ", $arr) . "<br>";
+
+    // array_merge
+    $arr1 = ['red', 'green', 'blue'];
+    $arr2 = ['cyan','magenta','yellow'];
+    $result = array_merge($arr1, $arr2);
+    echo "array_merge() => ";
+    print_r($result);
 ?>
