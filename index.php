@@ -1,14 +1,18 @@
 <?php
-   $num1 = 6;
-   $num2 = 3;
+   /*
+    *   LOGICAL OPERATORS
+   */
 
-   echo "{$num1} + {$num2} = " . $num1 + $num2 . "<br>";
-   echo "{$num1} - {$num2} = " . $num1 - $num2 . "<br>";
-   echo "{$num1} / {$num2} = " . $num1 / $num2 . "<br>";
-   echo "{$num1} * {$num2} = " . $num1 * $num2 . "<br>";
-   echo "{$num1} ** {$num2} = " . $num1 ** $num2 . "<br>";
-   echo "{$num1} % {$num2} = " . $num1  % $num2 . "<br>";
 
-   echo "{$num1}++ = " . $num1++ . "<br>";
-   echo "--{$num2} = " . --$num2 . "<br>";
+   $php = true;
+   $ruby = false;
+
+   //OR (|| - or)
+   $canApply = $php || $ruby;
+
+   //And (&& - and)
+   $canApply = $php && $ruby;
+
+   // Not !
+   echo !$canApply;
 ?>
