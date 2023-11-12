@@ -1,18 +1,14 @@
 <?php
-   /*
-    *   LOGICAL OPERATORS
-   */
+   $num1 = 1;
+   $num2 = 2;
 
 
-   $php = true;
-   $ruby = false;
-
-   //OR (|| - or)
-   $canApply = $php || $ruby;
-
-   //And (&& - and)
-   $canApply = $php && $ruby;
-
-   // Not !
-   echo !$canApply;
+   echo "{$num1} == {$num2} = " . (integer)($num1 == $num2) . "<br>";
+   echo "{$num1} === {$num2} = " . (integer)($num1 === $num2) . "<br>";
+   echo "{$num1} !== {$num2} = " . (integer)($num1 !== $num2) . "<br>";
+   echo "{$num1} <= {$num2} = " . (integer)($num1 <= $num2) . "<br>";
+   echo "{$num1} < {$num2} = " . (integer)($num1 < $num2) . "<br>";
+   echo "{$num1} >= {$num2} = " .(integer)($num1 >= $num2) . "<br>";
+   echo "{$num1} > {$num2} = " . (integer)($num1 > $num2) . "<br>";
+   echo "{$num1} <=> {$num2} = " . (integer)($num1 <=> $num2) . "<br>";
 ?>
