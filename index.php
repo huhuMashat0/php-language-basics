@@ -1,17 +1,41 @@
 <?php
     // funciton
-    function print1To10(){
-        $i = 1;
-        while ($i <= 10) {
-            echo $i++ ."<br>";
+    function is_odd($number){
+        echo $number % 2 ? "{$number} is odd" : "{$number} is even";
+    }
+    function calculate($n1,$n2, $calcu) 
+    {
+        switch($calcu)
+        {
+        case "+": 
+            $compute = $n1 + $n2; 
+            break;
+        case "-":
+            $compute = $n1 - $n2; 
+            break;
+        case "*":
+            $compute = $n1 * $n2; 
+            break;
+        case "/":
+            $compute = $n1 / $n2; 
+            break;
+        case "^":
+            $compute = $n1 ** $n2; 
+            break;
+        default:
+            $compute = $n1 + $n2; 
+            break;
         }
-
-        function start(){
-            echo "You caaaan doooooo ittttt";
-        }
+        return $compute;
     }
 
+    $a=5;
+    $b= "^";
+    $c= 2;
 
-    print1To10();
-    start();
+    echo "{$a} {$b} {$c} = " . calculate($a,$c,$b) . "<br>";
+
+    is_odd(23);
+
+
 ?>
