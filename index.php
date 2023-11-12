@@ -1,3 +1,6 @@
 <?php
-    echo "Homepage";
+
+    $name = 'Hussein';
+    // echo "Hello " . $name;
+    echo "Hello, {$name} ";
 ?>
