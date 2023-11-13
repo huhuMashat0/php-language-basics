@@ -1,5 +1,5 @@
 <?php
-    // Arguments 
+    // return 
     function sum (...$numbers){
         $acc = 0;
         foreach ($numbers as $number) $acc += $number;
@@ -10,4 +10,11 @@
 
     echo "If we collect all this numbers ( ". implode(" + ", $arr) . " ) The answer it will be = " .  sum(...$arr);
    
+
+    function is_odd($number){
+        return $number %2;
+    }
+
+    $num = 120;
+    echo "<br>Are Number {$num} is odd? => " . is_odd($num);
 ?>
