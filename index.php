@@ -1,20 +1,13 @@
 <?php
-    // return 
-    function sum (...$numbers){
-        $acc = 0;
-        foreach ($numbers as $number) $acc += $number;
-        return  $acc;
-    }
+    // closure function
 
-    $arr = [1,2,3,4,5,6,7,8,9];
+    $arr = [1,2,3,4,5];
 
-    echo "If we collect all this numbers ( ". implode(" + ", $arr) . " ) The answer it will be = " .  sum(...$arr);
-   
+    $func = function($value){
+        return $value *2;
+    };
 
-    function is_odd($number){
-        return $number %2;
-    }
-
-    $num = 120;
-    echo "<br>Are Number {$num} is odd? => " . is_odd($num);
+    print_r(
+        array_map($func, $arr)
+    );
 ?>
