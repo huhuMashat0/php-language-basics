@@ -4,6 +4,7 @@
         // Attributes
         protected $model;
         protected $year;
+        public static $CONSTANT = 'constant value';
 
         // constructor
         public function __construct($model, $year){
@@ -40,6 +41,11 @@
             echo "Name = " . $this->model ."<br>";
             echo "Year = " . $this->year ."<br>";
         }
+
+        public static function showConstant(){
+            // echo $this->model; <= this is will not work
+            echo self::$CONSTANT;
+        }
     }
 
     // Inheritance
@@ -71,6 +77,10 @@
 
     $car = new Car("Toyota",2024, 'orange');
     $car -> printInfo();
+
+    // from static
+    // echo "<br>" . Vehicle::$CONSTANT;
+    $vehicle->showConstant();
     
 
 ?>
