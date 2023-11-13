@@ -1,10 +1,9 @@
 <?php
     // classes
-
     class Vehicle{
         // Attributes
-        private $model;
-        private $year;
+        protected $model;
+        protected $year;
 
         // constructor
         public function __construct($model, $year){
@@ -39,6 +38,22 @@
         }
     }
 
+    // Inheritance
+    class Car extends Vehicle{
+        private $color;
+        public function __construct($model,$year, $color){
+            parent::__construct($model,$year);
+            $this->color = $color;
+        }
+
+        public function printInfo(){
+            echo "Name = " . $this->model ."<br>";
+            echo "Year = " . $this->year ."<br>";
+            echo "Color = " . $this->color ."<br>";
+        }
+    }
+
+
     // Object
     $vehicle = new Vehicle("BMW",2023);
     $vehicle->start();
@@ -49,7 +64,10 @@
 
     // $vehicle->setYear("Honda");
     $vehicle->setYear(2022);
-    echo " - " . $vehicle->getYear();
+    echo " - " . $vehicle->getYear() . "<br>";
+
+    $car = new Car("Toyota",2024, 'orange');
+    $car -> printInfo();
     
 
 ?>
