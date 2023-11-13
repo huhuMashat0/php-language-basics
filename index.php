@@ -36,6 +36,10 @@
         public function stop(){
             echo "{$this->model} engine stopped!";
         }
+        public function printInfo(){
+            echo "Name = " . $this->model ."<br>";
+            echo "Year = " . $this->year ."<br>";
+        }
     }
 
     // Inheritance
@@ -45,10 +49,9 @@
             parent::__construct($model,$year);
             $this->color = $color;
         }
-
+        // polymorphism | Overriding
         public function printInfo(){
-            echo "Name = " . $this->model ."<br>";
-            echo "Year = " . $this->year ."<br>";
+            parent::printInfo();
             echo "Color = " . $this->color ."<br>";
         }
     }
