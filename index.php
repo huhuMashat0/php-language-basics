@@ -3,13 +3,30 @@
 
     class Vehicle{
         // Attributes
-        public $model;
-        public $year;
+        private $model;
+        private $year;
 
         // constructor
         public function __construct($model, $year){
             $this->model = $model;
             $this->year = $year;
+        }
+
+        public function getModel(){
+            return $this->model;
+        }
+
+        public function setModel($model){
+            $this->model = $model;
+        }
+
+        public function getYear(){
+            return $this->year;
+        }
+
+        public function setYear($year){
+            if(is_int($year)) $this->year = $year;
+            else throw new Exception("Invalid year!");
         }
 
 
@@ -26,8 +43,13 @@
     $vehicle = new Vehicle("BMW",2023);
     $vehicle->start();
 
-    echo "<br>";
+    // Encapsulation
+    $vehicle->setModel("Honda");
+    echo "<br>" . $vehicle->getModel();
 
-    $vehicle2 = new Vehicle("Honda",2022);
-    $vehicle2->start();
+    // $vehicle->setYear("Honda");
+    $vehicle->setYear(2022);
+    echo " - " . $vehicle->getYear();
+    
+
 ?>
