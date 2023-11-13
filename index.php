@@ -1,17 +1,19 @@
 <?php
-    // arrow functions (php => 7.4)
+    // strtings
 
-    $arr = [1,2,3,4,5];
-    $num = 4;
+    $str = "The Quick Brown Fox Jumps Over the lazy dog";
 
-    // $func = function($value) use ($num){
-    //     return $value * $num;
-    // };
+    echo "The sentence used is ( " . $str . " )<br><br>";
 
-    $func = fn($value) => $value * $num;
+    echo "strlen(str) => ". strlen($str) . "<br>";
 
+    echo "strtolower(str) => ". strtolower($str) . "<br>";
+    
+    echo "strtoupper(str) => ". strtoupper($str) . "<br>";
 
-    print_r(
-        array_map($func, $arr)
-    );
+    echo "strpos(str, 'Q') => ". strpos($str,'Q') . "<br>";
+
+    echo "str_replace('dog','monkey', str) => ". str_replace('dog','monkey', $str) . "<br>"; 
+
+    echo "substr(str,5,10) => ". substr($str,4,5) . "<br>"; 
 ?>
