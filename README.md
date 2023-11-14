@@ -41,3 +41,16 @@
 * الدوال المجهولة Closure Functions
 * الدوال السهمية Arrow Functions
 *  دوال السلاسل النصية
+
+### القسم السابع: البرمجة الكائنية OOP
+* التعريف بالبرمجة كائنية التوجه
+* الأصناف Classes 
+* الكائنات Objects
+* التغليف Encapsulation 
+* الوراثة Inheritance
+* تجاوز الدوال Overriding 
+* الخاصيات والدوال الثابتة
+* الأصناف المجردة Abstract Classes
+* الواجهات Interfaces 
+* السمات Traits
+* الدوال السحرية Magic Methods 

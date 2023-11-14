@@ -1,33 +1,15 @@
 <?php
-    //Magic Methods
-
-    class Example {
-        public function  __construct() {
-            echo 'Constructor initialised <br>';
-        }
-
-        public function __call($method, $args) {
-            echo "Unkown method ({$method}) - (";
-            print_r($args);
-            echo ")<br>";
-        }
-
-        public function __get($name){
-            echo "Unknown method ({$name})<br>";
-        }
-
-        public function __set($name, $value) {
-            echo "({$name}) is ({$value}) <br>";
-        }
-
-        public function __destruct() {
-            echo "Object gets destroyed automatically <br>";
-        }
+    //try...catch
+    function division ($a,$b){
+        if ($b == 0) throw new Exception("Can't divide on 0. <br>");
+        return $a / $b;
     }
 
-    $example = new Example();
-    $example->hello('greet',2023);
-    $example->test;
-    $example->great = "Hello World";
-
+    try{
+        echo division(4,0) . "<br>";
+    } catch (Exception $e) {
+        echo $e->getMessage();
+    }finally{
+        echo "Finally";
+    }
 ?>
